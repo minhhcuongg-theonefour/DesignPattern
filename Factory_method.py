@@ -52,5 +52,3 @@ if __name__ == "__main__":
     person.person_method()
 
 
-
-    # Cương gà vl 111111
