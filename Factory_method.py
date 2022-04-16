@@ -50,3 +50,7 @@ if __name__ == "__main__":
     choice = input("Nhap person type: ")
     person = PersonFactory.build_person(choice, Name)
     person.person_method()
+
+
+
+    # Cương gà vl 111111
