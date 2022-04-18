@@ -6,7 +6,7 @@ class IPerson(metaclass=ABCMeta):
         self.name =  name   
 
     @abstractclassmethod
-    def person_method(self):
+    def person_method():
         "Interface"
     
 
