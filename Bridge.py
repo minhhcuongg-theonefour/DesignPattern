@@ -23,31 +23,6 @@ class IShape(metaclass=ABCMeta):
         "The method that will be handled at the shapes implementer"
         
 
-
-class Square(IShape):
-    
-
-    def __init__(self, canh, implementer : IShapeImplementer):
-        super().__init__(canh, implementer)
-        self.implementer = implementer()
-
-    def draw(self):
-        print(f"Hinh vuong co {self.canh} canh")
-        self.implementer.draw_implementation()
-
-
-class Triangle(IShape):
-    
-    def __init__(self, canh, implementer : IShapeImplementer):
-        super().__init__(canh, implementer)
-        self.implementer = implementer()
-
-    def draw(self):
-        print(f"Hinh tam giac co {self.canh} canh")
-        self.implementer.draw_implementation()
-
-
-
 class SquareImplementer(IShapeImplementer):
     
     def draw_implementation(self):
@@ -75,6 +50,28 @@ class TriangleImplementer(IShapeImplementer):
         print("*        *")
         print("*         *")
         print("************")
+
+
+class Square(IShape):
+    
+    def __init__(self, canh, implementer : IShapeImplementer):
+        super().__init__(canh, implementer)
+        self.implementer = implementer()
+
+    def draw(self):
+        print(f"Hinh vuong co {self.canh} canh")
+        self.implementer.draw_implementation()
+
+
+class Triangle(IShape):
+    
+    def __init__(self, canh, implementer : IShapeImplementer):
+        super().__init__(canh, implementer)
+        self.implementer = implementer()
+
+    def draw(self):
+        print(f"Hinh tam giac co {self.canh} canh")
+        self.implementer.draw_implementation()
 
 
 
