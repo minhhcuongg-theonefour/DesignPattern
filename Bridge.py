@@ -76,6 +76,7 @@ class Triangle(IShape):
 
 
 canh = input("Nhap so canh (3 hoac 4):")
+print("------------------------------")
 if canh == "3":
     hinh = Triangle(canh, TriangleImplementer)
     hinh.draw()
