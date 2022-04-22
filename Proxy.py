@@ -15,7 +15,6 @@ class Cash(ICash):                      #Real Object
     def cash_method(self):
         print(f"So tien trong bank: {self.money}")
 
-
     def checkThanhtoan(self):
         self.money = self.money - 1000
         return self.money
@@ -39,6 +38,5 @@ p1.cash_method()
 print("-------------------------")
 p2 = Credit_card(n)
 p2.cash_method()
-
 
 
