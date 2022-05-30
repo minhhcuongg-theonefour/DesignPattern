@@ -1,4 +1,5 @@
 from asyncio.windows_events import NULL
+from pickle import TRUE
 
 import MonHoc as MonHoc
 import Khoa as KH
@@ -75,6 +76,7 @@ class AddSinhVien:
             Khoa.List_SV_of_Khoa.append(sv)
 
             print("Da them sinh vien !!!")
+            print(30*"-")
 
         else:
             print(KH.NullKhoa.ThongBao())
@@ -116,30 +118,37 @@ class DeleteSinhVien:
 
 def menu():
     print("----Quan ly sinh vien----");
-    print("1.Nhap sinh vien");
-    print("2.Hien thi sinh vien");
-    print("3.Tim kiem sinh vien");
-    print("4.Xoa sinh vien");
-    print("0.Quay lai");
+    print("1.Hien thi sinh vien");
+    print("2.Them sinh vien");
+    print("3.Xoa sinh vien");
+    print("0.Thoat");
 
     i = int(input("Lua chon: "))
     return i
 
 
 a = SinhVien("bach","24/02/2001","Khoa Chat luong cao", "cntt", 20000, "vt", "2019")
-b = SinhVien("bah","2001","Khoa Cong nghe thong tin", "cntt", 20000, "vt", "2019")
-c = SinhVien("bah","2001","Khoa Cong nghe thong tin", "cntt", 20000, "vt", "2019")
+b = SinhVien("bach","2001","Khoa Cong nghe thong tin", "cntt", 20000, "vt", "2019")
+c = SinhVien("bach","2001","Khoa Cong nghe thong tin", "cntt", 20000, "vt", "2019")
 List_Sv.append(a)
 List_Sv.append(b)
 List_Sv.append(c)
 
-# Sv = AddSinhVien.AddSinhVien()
-# Dp = DisplaySinhVien.DisplaySinhVien()
-# dele = DeleteSinhVien.DeleteSinhVien()
-# Dp = DisplaySinhVien.DisplaySinhVien()
 
-a.cash_method()
-# i= menu()
-# print(i)
+while(TRUE):
+    choice = menu()
+    if (choice == 1):
+        Dp = DisplaySinhVien.DisplaySinhVien()
+        
+    elif (choice ==2):
+        Sv = AddSinhVien.AddSinhVien()
+        
+    elif (choice ==3):
+        dele = DeleteSinhVien.DeleteSinhVien()
+        
+    else:
+        break
+
+# a.cash_method()
 
 print(20*"-")
